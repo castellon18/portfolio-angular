@@ -1,0 +1,171 @@
+<section class="bg-blue-900 justify-items-center w-4xl m-auto p-4 rounded-box mt-4">
+  <div class="mb-2">
+    <h1 class="text-4xl font-bold">Cesar Ricardo Castellon Ramirez</h1>
+  </div>
+
+  <div class="flex flex-row">
+    <a class="text-blue-400 underline cursor-pointer">
+      ricardo18cr&#64;icloud.com
+    </a>
+    <div class="divider divider-horizontal"></div>
+    <h3>+505 8466-2954</h3>
+    <div class="divider divider-horizontal"></div>
+    <h3>Managua, Nicaragua</h3>
+  </div>
+</section>
+
+<section class="mt-2">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+  >
+    <legend class="fieldset-legend text-blue-300 text-2xl">
+      {{ etiquetas[0] | uppercase }}
+    </legend>
+
+    <p class="text-justify text-lg">
+      Apasionado por el desarrollo de software, con un enfoque en tecnologías
+      modernas y un firme compromiso con el aprendizaje continuo. Como
+      desarrollador en formación, tengo experiencia en frontend y backend,
+      trabajando con Angular, .NET, Node.js y NestJs para la creación de
+      soluciones robustas y escalables.
+    </p>
+
+    <p class="text-justify text-lg mt-2">
+      Domino C#, JavaScript y TypeScript, permitiéndome desarrollar aplicaciones
+      eficientes y adaptables. Además, manejo HTML y CSS para diseñar interfaces
+      atractivas y funcionales, garantizando una experiencia de usuario
+      optimizada.
+    </p>
+
+    <p class="text-justify text-lg mt-2">
+      Cuento con habilidades en Git y GitHub, esenciales para la gestión de
+      versiones y el trabajo colaborativo en equipo. También tengo conocimientos
+      en SQL Server y PostgreSQL, optimizando estructuras de datos y consultas
+      para garantizar un rendimiento óptimo.
+    </p>
+
+    <p class="text-justify text-lg mt-2">
+      Me caracterizo por una mentalidad analítica, capacidad de resolución de
+      problemas y enfoque proactivo, buscando siempre oportunidades para innovar
+      y generar impacto en cada proyecto. Estoy listo para afrontar nuevos
+      desafíos y seguir creciendo en el apasionante mundo de la programación.
+    </p>
+  </fieldset>
+</section>
+
+<section class="mt-2">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+  >
+    <legend class="fieldset-legend text-blue-300 text-2xl">
+      {{ etiquetas[1] | uppercase }}
+    </legend>
+
+    <ul class="list bg-base-100 rounded-box shadow-md">
+      @for (item of academicTraining(); track item.id) {
+      <li class="list-row">
+        <div>
+          <div class="font-bold">{{ item.year }}</div>
+          <div class="text-xs font-semibold opacity-60">
+            {{ item.institution }}
+          </div>
+          <div class="italic">
+            {{ item.title }}
+          </div>
+        </div>
+      </li>
+      }
+    </ul>
+  </fieldset>
+</section>
+
+<section class="mt-2">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+  >
+    <legend class="fieldset-legend text-blue-300 text-2xl">
+      {{ etiquetas[2] | uppercase }}
+    </legend>
+
+    <ul class="list bg-base-100 rounded-box shadow-md">
+      @for (item of technicalSkill(); track item.id) {
+      <li class="list-row">
+        <div>
+          <div class="font-bold">{{ item.name }}</div>
+            @for (skill of item.skill; track $index) {
+            <div class="flex flex-row text-xs font-semibold opacity-60 mt-3">
+              {{ skill.name }}
+              @for (listSkill of skill.list; track $index) {
+                <span class="badge badge-primary badge-sm ml-2">
+                  {{ listSkill }}
+                </span>
+              }
+            </div>
+            }
+        </div>
+      </li>
+      }
+    </ul>
+  </fieldset>
+</section>
+
+<section class="mt-2">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+  >
+    <legend class="fieldset-legend text-blue-300 text-2xl">
+      {{ etiquetas[3] | uppercase }}
+    </legend>
+
+    <ul class="list bg-base-100 rounded-box shadow-md">
+      <li class="list-row">
+        <div>
+          <div class="font-bold">Nativo</div>
+            <div class="flex flex-row text-xs font-semibold opacity-60 mt-3">
+              Español
+                <span class="badge badge-primary badge-sm ml-2">
+                  Latinoamérica
+                </span>
+            </div>
+        </div>
+      </li>
+      <li class="list-row">
+        <div>
+          <div class="font-bold">Basico</div>
+            <div class="flex flex-row text-xs font-semibold opacity-60 mt-3">
+              Ingles
+                <span class="badge badge-primary badge-sm ml-2">
+                  Estados Unidos
+                </span>
+            </div>
+        </div>
+      </li>
+    </ul>
+  </fieldset>
+</section>
+
+<section class="mt-2">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+  >
+    <legend class="fieldset-legend text-blue-300 text-2xl">
+      {{ etiquetas[4] | uppercase }}
+    </legend>
+
+    <ul class="list bg-base-100 rounded-box shadow-md">
+      @for (item of academicTraining(); track item.id) {
+      <li class="list-row">
+        <div>
+          <div class="font-bold">{{ item.year }}</div>
+          <div class="text-xs font-semibold opacity-60">
+            {{ item.institution }}
+          </div>
+          <div class="italic">
+            {{ item.title }}
+          </div>
+        </div>
+      </li>
+      }
+    </ul>
+  </fieldset>
+</section>
