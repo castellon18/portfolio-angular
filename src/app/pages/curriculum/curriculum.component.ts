@@ -4,6 +4,7 @@ import { AcademicTrainingService } from '../../services/academic-training.servic
 import { TechnicalSkillService } from '../../services/technical-skill.service';
 import { AcademicTraining } from '../../interfaces/academic-training.interface';
 import { TechnicalSkill } from '../../interfaces/skill.interface';
+import { WorkExperienceService } from '../../services/work-experience.service';
 
 @Component({
   selector: 'app-cv',
@@ -14,9 +15,11 @@ export default class CurriculumComponent {
 
   academicTrainingService = inject(AcademicTrainingService);
   technicalSkillService = inject(TechnicalSkillService);
+  workExperienceService = inject(WorkExperienceService);
 
   academicTraining = signal<AcademicTraining[]>(this.academicTrainingService.AcademicTraining);
   technicalSkill = signal<TechnicalSkill[]>(this.technicalSkillService.technicalSkills);
+  workExperience = signal(this.workExperienceService.workExperiences);
 
   etiquetas: string[] = [
     'perfil profesional',

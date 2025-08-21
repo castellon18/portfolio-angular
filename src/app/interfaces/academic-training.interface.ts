@@ -3,4 +3,5 @@ export interface AcademicTraining {
   title: string;
   institution: string;
   year:string;
+  instructor?:string;
 }

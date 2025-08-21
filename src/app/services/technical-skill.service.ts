@@ -12,15 +12,20 @@ export class TechnicalSkillService {
         {
           name:'Backend',
           list:[
-            '.NET Core (C#)',
+            'ASP .NET Core (C#)',
             'Nodejs',
-            'NestJs',
+            'Express',
           ],
         },
         {
           name:'Frontend',
           list:[
+            'HTML5',
+            'CSS3',
+            'JavaScript',
+            'TypeScript',
             'Angular',
+            'Blazor',
           ],
         },
         {
@@ -37,7 +42,7 @@ export class TechnicalSkillService {
             'GitHub',
             'Docker',
             'Postman',
-            'Excel',
+            'Office 305',
           ],
         }
       ],
@@ -46,24 +51,30 @@ export class TechnicalSkillService {
       id: 2,
       name:'Contabilidad',
       skill:[
-        {name: 'Conocimientos contables básicos',}
+        {name: 'Prácticas contables',},
+        {name: 'Integridad y honestidad',},
+        {name: 'Multitarea',},
       ],
     },
     {
       id: 3,
       name:'Inventario',
       skill:[
-        {name: 'Manejo y seguimiento de Kardex.',},
-        {name: 'Análisis de faltantes en las entradas y salidas.',},
+        {name: 'Conocimiento de logísca y almacén',},
+        {name: 'Organización.',},
+        {name: 'Trabajo en equipo.',},
+        {name: 'Comunicación Efectiva.',},
       ],
     },
     {
       id: 4,
       name:'Otros',
       skill:[
-        {name: 'Fácil aprendizaje',},
+        {name: 'Capacidad de aprendizaje',},
         {name: 'Autodidacta.',},
         {name: 'Expresivo.',},
+        {name: 'Adaptabilidad.',},
+        {name: 'Resolución de Problemas.',},
       ],
     }
   ];

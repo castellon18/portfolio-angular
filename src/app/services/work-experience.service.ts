@@ -1,0 +1,171 @@
+import { Injectable } from '@angular/core';
+import { WorkExperience } from '../interfaces/work-experience';
+
+@Injectable({providedIn: 'root'})
+export class WorkExperienceService {
+
+  private workExperince : WorkExperience[] = [
+    {
+      id:  1,
+      company: 'Electromecánica Especializada.',
+      position: 'Técnico en Informática',
+      startDate: '2023',
+      endDate: 'Actualmente',
+      responsibilities: [
+        'Instalación y configuran equipos informáticos, software y sistemas operativos.',
+        'Diagnóstico y solución de problemas técnicos relacionados con hardware, software, redes y sistemas informáticos.',
+        'Brindar asistencia técnica a usuarios para resolver problemas y responder preguntas sobre el uso de la tecnología.',
+        'Configurar y administrar redes informáticas, asegurando su correcto funcionamiento y seguridad.',
+        'Mantener los sistemas y equipos actualizados con las últimas versiones de software y parches de seguridad.',
+        'Administración sistema SIEE (Sistema Integrado Electromecanica Especializada).',
+        'Administrador de sistema NominaEE (Sistema de Nómina de Electromecánica Especializada).',
+      ],
+      location: 'Managua, Nicaragua',
+      technologies: [
+        'NodeJs',
+        'Express',
+        'JavaScript',
+        'TypeScript',
+        'HTML',
+        'CSS',
+        'Angular',
+        'PrimeNG',
+        'ChartJs',
+        'PostgreSQL',
+        'SQL Server',
+        'Bitbucket',
+        'Access',
+      ],
+    },
+    {
+      id: 2,
+      company: 'RC Solution IT',
+      position: 'Soporte Técnico -  Empresa DHL Global Forwarding',
+      startDate: '2021',
+      endDate: '2023',
+      responsibilities:[
+        'Instalación y configuran equipos informáticos, software y sistemas operativos.',
+        'Diagnóstico y solución de problemas técnicos relacionados con hardware, software, redes y sistemas informáticos.',
+        'Brindar asistencia técnica a usuarios para resolver problemas y responder preguntas sobre el uso de la tecnología.',
+        'Ejecución del Proyecto Control de Asistencia',
+        'Inducción al manejo de Microsoft Office 365 como atención a usuario'
+      ],
+      location: 'Managua, Nicaragua',
+      technologies: [
+        'Microsoft Office 365',
+        'Microsoft Teams',
+        'Microsoft SharePoint',
+        'Microsoft OneDrive',
+        'Microsoft Power Automate',
+        'Microsoft Power Apps',
+      ],
+    },
+    {
+      id: 3,
+      company: 'Universidad de Managua (UDM).',
+      position: 'Profesor de Horario',
+      startDate: '2020',
+      endDate: '',
+      responsibilities:[
+        'Informática Aplicada (Excel Básico).',
+        'Programación en C#.',
+        'Diagrama de Flujo.',
+      ],
+      location: 'Managua, Nicaragua',
+      technologies: [
+        'Microsoft Excel',
+        'Visual Studio Comunity',
+        'DPL',
+      ],
+    },
+    {
+      id: 4,
+      company: 'Repuestos Estrada, S.A.',
+      position: 'Encargado de Inventario y Computo.',
+      startDate: '2016',
+      endDate: '2020',
+      responsibilities:[
+        'Manejo de los Sistema ERP CyS (Controles y Sistemas), Velneo.',
+        'Ingreso de las Compras Locales y Extranjeras de mercadería.',
+        'Ingreso de las Salidas de Bodegas por Faltantes en Inventario o por Cambio de Producto al Cliente.',
+        'Ingreso de Entradas a Bodega por Sobrantes en Inventario o por Cambio de Producto al Cliente.',
+        'Ingreso de Precios de Venta.',
+        'Inventario Físico de la Mercadería.',
+        'Prorrateo de las Pólizas de Importación.',
+        'Reporte de Consolidado de Venta para Pedido de Mercadería a los Proveedores.',
+        'Reporte de Ventas Mensuales.',
+        'Reportes de Existencias Mensual de las Diferentes Bodegas.',
+        'Conciliación de los Prestamos entre Tiendas de los Diferentes Productos.',
+        'Ingreso de Traslados entre Tiendas.',
+        'Ingreso de Productos Utilizados para Inversión de Vehículo Pesado.',
+        'Ingreso de los Vehículos Usados para la Venta.',
+        'Conciliación de Facturas del Proveedor contra Mercadería Física Recibida en Bodega.',
+        'Conciliaciones bancarias.',
+        'Ingresos de depósitos bancarios.',
+        'Instalación y configuran equipos informáticos, software y sistemas operativos.',
+        'Diagnóstico y solución de problemas técnicos relacionados con hardware, software, redes y sistemas informáticos.',
+        'Brindar asistencia técnica a usuarios para resolver problemas y responder preguntas sobre el uso de la tecnología.',
+        'Configurar y administrar redes informáticas, asegurando su correcto funcionamiento y seguridad.',
+        'Mantener los sistemas y equipos actualizados con las últimas versiones de software y parches de seguridad.',
+      ],
+      location: 'Managua, Nicaragua',
+      technologies: [
+        'Microsoft Excel',
+      ],
+    },
+    {
+      id: 5,
+      company: 'Agencia Aduanera Castellanos de Nicaragua, S.A.',
+      position: 'Auxiliar Operativo II.',
+      startDate: '2016',
+      endDate: '',
+      responsibilities:[
+        'Manejo del sistema SEA',
+        'Contabilización de Comprobantes de Pago o CK.',
+        'Contabilización de Transferencias Bancarias.',
+        'Contabilización de Boletines de Impuestos Aduaneros.',
+        'Contabilización de Caja Chica.',
+        'Contabilización de Recibos Oficiales de Caja.',
+        'Gestión de Cuentas por Cobrar a Clientes.',
+        'Conciliación Bancaria.',
+        'Conciliación de las Cuentas Contables de retención 1% y 2%.',
+        'Archivo de los Documentos Contables.',
+      ],
+      location: 'Managua, Nicaragua',
+      technologies: [
+        'Microsoft Excel',
+      ],
+    },
+    {
+      id: 6,
+      company: 'Humberto Álvarez Sucesores de Nicaragua, S.A.',
+      position: 'Auxiliar Contable.',
+      startDate: '2013',
+      endDate: '2015',
+      responsibilities:[
+        'Contabilización Transferencias de Pago.',
+        'Contabilización Traslados de fondos de cuentas bancarias.',
+        'Contabilización Caja Chica.',
+        'Contabilización de Caja Chica.',
+        'Contabilización de Pago a Proveedores.',
+        'Contabilización Boletines de Impuestos Aduaneros.',
+        'Contabilización Comprobantes de Diario.',
+        'Reportes y Declaración de IVA e IR por Pagar.',
+        'Elaboración de Colillas de Pago.',
+        'Arqueo de Caja Chica.',
+        'Inventario de Activos Fijos.',
+        'Conciliación Bancaria.',
+        'Archivo de los Documentos Contables.',
+      ],
+      location: 'Managua, Nicaragua',
+      technologies: [
+        'Microsoft Excel',
+      ],
+    },
+  ];
+
+  get workExperiences(): WorkExperience[] {
+    return this.workExperince;
+  }
+
+}

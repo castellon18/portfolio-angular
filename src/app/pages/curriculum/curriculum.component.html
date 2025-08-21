@@ -13,7 +13,7 @@
     <h3>Managua, Nicaragua</h3>
   </div>
 </section>
-
+<!--Perfil Profesional-->
 <section class="mt-2">
   <fieldset
     class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
@@ -52,7 +52,7 @@
     </p>
   </fieldset>
 </section>
-
+<!--Formacion Academica-->
 <section class="mt-2">
   <fieldset
     class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
@@ -72,13 +72,20 @@
           <div class="italic">
             {{ item.title }}
           </div>
+          <div>
+            @if (item.instructor) {
+              <span class="badge badge-primary badge-sm mt-2">
+                Instructor: {{ item.instructor }}
+              </span>
+            }
+          </div>
         </div>
       </li>
       }
     </ul>
   </fieldset>
 </section>
-
+<!--Habilidades-->
 <section class="mt-2">
   <fieldset
     class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
@@ -108,7 +115,7 @@
     </ul>
   </fieldset>
 </section>
-
+<!--Idioma-->
 <section class="mt-2">
   <fieldset
     class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
@@ -143,7 +150,7 @@
     </ul>
   </fieldset>
 </section>
-
+<!--Experiencia Laboral-->
 <section class="mt-2">
   <fieldset
     class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
@@ -153,15 +160,47 @@
     </legend>
 
     <ul class="list bg-base-100 rounded-box shadow-md">
-      @for (item of academicTraining(); track item.id) {
+      @for (item of workExperience(); track item.id) {
       <li class="list-row">
         <div>
-          <div class="font-bold">{{ item.year }}</div>
-          <div class="text-xs font-semibold opacity-60">
-            {{ item.institution }}
+          <div class="flex flex-row justify-between">
+            <div class="text-lg font-bold">{{ item.company }}</div>
+            @if (item.endDate) {
+              <div class="font-semibold opacity-40">{{ item.startDate }} - {{ item.endDate }}</div>
+            }
+            @else {
+              <div class="font-semibold opacity-40">{{ item.startDate }}</div>
+            }
           </div>
-          <div class="italic">
-            {{ item.title }}
+          <div class="text-base font-semibold">
+            {{ item.position }}
+          </div>
+          <div class="text-xs italic">
+            {{ item.location }}
+          </div>
+          <div class="text-sm">
+            <ul class="list-disc p-3 ml-4">
+              <h4 class="font-semibold">Responsabilidades:</h4>
+              @for (res of item.responsibilities; track $index) {
+                <li>
+                  <div>
+                    {{ res }}
+                  </div>
+                </li>
+                }
+            </ul>
+          </div>
+          <div>
+            <ul class="list-disc p-3 ml-4">
+              <h4 class="font-semibold">Tecnologías:</h4>
+              @for (tec of item.technologies; track $index) {
+                <li>
+                  <div>
+                    {{ tec }}
+                  </div>
+                </li>
+                }
+            </ul>
           </div>
         </div>
       </li>
