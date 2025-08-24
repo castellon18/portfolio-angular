@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SkillsComponent } from "./components/skills/skills.component";
 import { ListSkillComponent } from "./components/list-skill/list-skill.component";
+import { PresentationComponent } from "./components/presentation/presentation.component";
 
 interface Cancion {
   title : string;
@@ -10,9 +11,8 @@ interface Cancion {
 
 @Component({
   selector: 'app-home',
-  imports: [SkillsComponent, ListSkillComponent],
+  imports: [SkillsComponent, ListSkillComponent, PresentationComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
 })
 export default class HomeComponent {
   songs: Cancion[] = [

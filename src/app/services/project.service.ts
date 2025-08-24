@@ -9,10 +9,10 @@ export class ProjectService {
   private projects: Project[] = [
     {
       id: 1,
-      title: "Amazon",
-      description: "E-commerce platform realized with ASP.NET Core",
-      imagePath: "assets/img/amazon.PNG",
-      url: "https://amazon.com"
+      title: "Manejo Presupuesto",
+      description: "Sistema de manejo de presupuesto personal realizado con ASP.NET Core MVC C#, base de datos SQL Server",
+      imagePath: "assets/img/manejo-presupuesto.png",
+      url: "http://dayemi.somee.com/"
     },
     {
       id: 2,

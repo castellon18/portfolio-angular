@@ -1,4 +1,4 @@
-<section class="bg-blue-900 justify-items-center w-4xl m-auto p-4 rounded-box mt-4">
+<section class="bg-blue-900 justify-items-center max-w-7xl w-full m-auto p-4 rounded-box mt-2">
   <div class="mb-2">
     <h1 class="text-4xl font-bold">Cesar Ricardo Castellon Ramirez</h1>
   </div>
@@ -16,13 +16,13 @@
 <!--Perfil Profesional-->
 <section class="mt-2">
   <fieldset
-    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-2"
   >
     <legend class="fieldset-legend text-blue-300 text-2xl">
       {{ etiquetas[0] | uppercase }}
     </legend>
 
-    <p class="text-justify text-lg">
+    <p class="text-justify text-base">
       Apasionado por el desarrollo de software, con un enfoque en tecnologías
       modernas y un firme compromiso con el aprendizaje continuo. Como
       desarrollador en formación, tengo experiencia en frontend y backend,
@@ -30,21 +30,21 @@
       soluciones robustas y escalables.
     </p>
 
-    <p class="text-justify text-lg mt-2">
+    <p class="text-justify text-base mt-2">
       Domino C#, JavaScript y TypeScript, permitiéndome desarrollar aplicaciones
       eficientes y adaptables. Además, manejo HTML y CSS para diseñar interfaces
       atractivas y funcionales, garantizando una experiencia de usuario
       optimizada.
     </p>
 
-    <p class="text-justify text-lg mt-2">
+    <p class="text-justify text-base mt-2">
       Cuento con habilidades en Git y GitHub, esenciales para la gestión de
       versiones y el trabajo colaborativo en equipo. También tengo conocimientos
       en SQL Server y PostgreSQL, optimizando estructuras de datos y consultas
       para garantizar un rendimiento óptimo.
     </p>
 
-    <p class="text-justify text-lg mt-2">
+    <p class="text-justify text-base mt-2">
       Me caracterizo por una mentalidad analítica, capacidad de resolución de
       problemas y enfoque proactivo, buscando siempre oportunidades para innovar
       y generar impacto en cada proyecto. Estoy listo para afrontar nuevos
@@ -55,7 +55,7 @@
 <!--Formacion Academica-->
 <section class="mt-2">
   <fieldset
-    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-2"
   >
     <legend class="fieldset-legend text-blue-300 text-2xl">
       {{ etiquetas[1] | uppercase }}
@@ -66,7 +66,7 @@
       <li class="list-row">
         <div>
           <div class="font-bold">{{ item.year }}</div>
-          <div class="text-xs font-semibold opacity-60">
+          <div class="text-base font-semibold opacity-60">
             {{ item.institution }}
           </div>
           <div class="italic">
@@ -88,7 +88,7 @@
 <!--Habilidades-->
 <section class="mt-2">
   <fieldset
-    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-2"
   >
     <legend class="fieldset-legend text-blue-300 text-2xl">
       {{ etiquetas[2] | uppercase }}
@@ -98,12 +98,12 @@
       @for (item of technicalSkill(); track item.id) {
       <li class="list-row">
         <div>
-          <div class="font-bold">{{ item.name }}</div>
+          <div class=" text-lg font-bold text-blue-400">{{ item.name }}</div>
             @for (skill of item.skill; track $index) {
-            <div class="flex flex-row text-xs font-semibold opacity-60 mt-3">
+            <div class="flex flex-row text-base font-semibold mt-3">
               {{ skill.name }}
               @for (listSkill of skill.list; track $index) {
-                <span class="badge badge-primary badge-sm ml-2">
+                <span class="badge badge-primary ml-2">
                   {{ listSkill }}
                 </span>
               }
@@ -118,7 +118,7 @@
 <!--Idioma-->
 <section class="mt-2">
   <fieldset
-    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-2"
   >
     <legend class="fieldset-legend text-blue-300 text-2xl">
       {{ etiquetas[3] | uppercase }}
@@ -127,10 +127,10 @@
     <ul class="list bg-base-100 rounded-box shadow-md">
       <li class="list-row">
         <div>
-          <div class="font-bold">Nativo</div>
-            <div class="flex flex-row text-xs font-semibold opacity-60 mt-3">
+          <div class="font-bold text-base text-blue-400">Nativo</div>
+            <div class="flex flex-row text-base font-semibold mt-3">
               Español
-                <span class="badge badge-primary badge-sm ml-2">
+                <span class="badge badge-primary ml-2">
                   Latinoamérica
                 </span>
             </div>
@@ -138,10 +138,10 @@
       </li>
       <li class="list-row">
         <div>
-          <div class="font-bold">Basico</div>
-            <div class="flex flex-row text-xs font-semibold opacity-60 mt-3">
+          <div class="font-bold text-base text-blue-400">Basico</div>
+            <div class="flex flex-row text-base font-semibold mt-3">
               Ingles
-                <span class="badge badge-primary badge-sm ml-2">
+                <span class="badge badge-primary ml-2">
                   Estados Unidos
                 </span>
             </div>
@@ -151,60 +151,57 @@
   </fieldset>
 </section>
 <!--Experiencia Laboral-->
-<section class="mt-2">
+<section class="mt-8">
   <fieldset
-    class="fieldset bg-base-200 border-base-300 rounded-box w-4xl m-auto border p-4"
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-6 shadow-xl"
   >
-    <legend class="fieldset-legend text-blue-300 text-2xl">
+    <legend class="fieldset-legend text-blue-300 text-3xl font-bold mb-6">
       {{ etiquetas[4] | uppercase }}
     </legend>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+      @for (items of workExperience(); track items.id) {
+      <div class="card bg-base-100 shadow-lg border border-base-300 p-6 transition-transform duration-300 hover:scale-105">
+        <div class="card-body p-0">
+          <h3 class="card-title text-2xl font-bold text-blue-400 mb-1">
+            {{ items.company }}
+          </h3>
+          <div class="flex items-center justify-between mb-2">
+            <span class="badge badge-lg badge-outline badge-info font-semibold opacity-90">
+              {{ items.Dates }}
+            </span>
+            <span class="text-base italic text-gray-500">
+              {{ items.location }}
+            </span>
+          </div>
+          <p class="text-lg font-semibold text-gray-100 mb-3">
+            {{ items.position }}
+          </p>
+          <div class="divider"></div>
 
-    <ul class="list bg-base-100 rounded-box shadow-md">
-      @for (item of workExperience(); track item.id) {
-      <li class="list-row">
-        <div>
-          <div class="flex flex-row justify-between">
-            <div class="text-lg font-bold">{{ item.company }}</div>
-            @if (item.endDate) {
-              <div class="font-semibold opacity-40">{{ item.startDate }} - {{ item.endDate }}</div>
-            }
-            @else {
-              <div class="font-semibold opacity-40">{{ item.startDate }}</div>
-            }
-          </div>
-          <div class="text-base font-semibold">
-            {{ item.position }}
-          </div>
-          <div class="text-xs italic">
-            {{ item.location }}
-          </div>
-          <div class="text-sm">
-            <ul class="list-disc p-3 ml-4">
-              <h4 class="font-semibold">Responsabilidades:</h4>
-              @for (res of item.responsibilities; track $index) {
-                <li>
-                  <div>
-                    {{ res }}
-                  </div>
-                </li>
-                }
+          <div class="mb-4">
+            <h4 class="font-semibold text-lg mb-2 text-gray-200">Responsabilidades:</h4>
+            <ul class="list-disc ml-6 space-y-1 text-gray-300">
+              @for (responsability of items.responsibilities; track responsability.id) {
+              <li>
+                {{ responsability.description }}
+              </li>
+              }
             </ul>
           </div>
+
           <div>
-            <ul class="list-disc p-3 ml-4">
-              <h4 class="font-semibold">Tecnologías:</h4>
-              @for (tec of item.technologies; track $index) {
-                <li>
-                  <div>
-                    {{ tec }}
-                  </div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-200">Tecnologías:</h4>
+            <ul class="flex flex-wrap gap-2">
+              @for (tecnology of items.technologies; track tecnology.id) {
+                <li class="badge badge-primary badge-outline text-sm">
+                  {{ tecnology.name }} - {{ tecnology.version }}
                 </li>
-                }
+              }
             </ul>
           </div>
         </div>
-      </li>
+      </div>
       }
-    </ul>
+    </div>
   </fieldset>
 </section>
