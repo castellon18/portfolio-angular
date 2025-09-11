@@ -1,14 +1,14 @@
-@for (item of song(); track $index) {
+@for (item of projectList(); track item.id) {
   <li class="p-4 flex items-center gap-4 hover:bg-base-200 transition-colors duration-200 cursor-pointer">
   <div class="flex-none">
-    <img class="size-12 rounded-box" [src]="item.imageUrl" [alt]="'Cover de la canción ' + item.title"/>
+    <img class="size-12 rounded-box" [src]="item.imagePath" [alt]="item.title"/>
   </div>
   <div class="flex-1">
     <div class="font-semibold text-base-content">{{ item.title }}</div>
-    <div class="text-xs uppercase font-medium opacity-60">{{ item.artist }}</div>
+    <div class="text-xs uppercase font-medium opacity-60">{{ item.description }}</div>
   </div>
   <div class="flex-none flex items-center space-x-2">
-    <a class="btn btn-outline btn-primary rounded-full px-6 py-2 text-lg font-semibold" target="_blank">
+    <a class="btn btn-outline btn-primary rounded-full px-6 py-2 text-lg font-semibold" [href]="item.url" target="_blank">
       Ver Proyecto
     </a>
   </div>

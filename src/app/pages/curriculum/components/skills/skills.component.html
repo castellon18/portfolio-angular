@@ -1,0 +1,29 @@
+<section class="mt-2">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-2"
+  >
+    <legend class="fieldset-legend text-blue-300 text-2xl">
+      {{ title() | uppercase }}
+    </legend>
+
+    <ul class="list bg-base-100 rounded-box shadow-md">
+      @for (item of technicalSkill(); track item.id) {
+      <li class="list-row">
+        <div>
+          <div class=" text-lg font-bold text-blue-400">{{ item.name }}</div>
+            @for (skill of item.skill; track $index) {
+            <div class="flex flex-row text-base font-semibold mt-3">
+              {{ skill.name }}
+              @for (listSkill of skill.list; track $index) {
+                <span class="badge badge-primary ml-2">
+                  {{ listSkill }}
+                </span>
+              }
+            </div>
+            }
+        </div>
+      </li>
+      }
+    </ul>
+  </fieldset>
+</section>

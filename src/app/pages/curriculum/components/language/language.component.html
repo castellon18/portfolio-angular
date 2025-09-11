@@ -1,0 +1,25 @@
+<section class="mt-2">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-2"
+  >
+    <legend class="fieldset-legend text-blue-300 text-2xl">
+      {{ title() | uppercase }}
+    </legend>
+
+    <ul class="list bg-base-100 rounded-box shadow-md">
+      @for (item of language(); track item.id) {
+        <li class="list-row">
+          <div>
+            <div class="font-bold text-base text-blue-400">{{item.level}}</div>
+              <div class="flex flex-row text-base font-semibold mt-3">
+                {{item.name}}
+                  <span class="badge badge-primary ml-2">
+                    {{item.comes_from}}
+                  </span>
+              </div>
+          </div>
+        </li>
+      }
+    </ul>
+  </fieldset>
+</section>

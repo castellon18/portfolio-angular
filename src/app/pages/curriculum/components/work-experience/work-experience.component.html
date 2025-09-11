@@ -1,0 +1,54 @@
+<section class="mt-8">
+  <fieldset
+    class="fieldset bg-base-200 border-base-300 rounded-box max-w-7xl w-full m-auto border p-6 shadow-xl"
+  >
+    <legend class="fieldset-legend text-blue-300 text-3xl font-bold mb-6">
+      {{ title() | uppercase }}
+    </legend>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+      @for (items of workExperience(); track items.id) {
+      <div class="card bg-base-100 shadow-lg border border-base-300 p-6 transition-transform duration-300 hover:scale-105">
+        <div class="card-body p-0">
+          <h3 class="card-title text-2xl font-bold text-blue-400 mb-1">
+            {{ items.company }}
+          </h3>
+          <div class="flex items-center justify-between mb-2">
+            <span class="badge badge-lg badge-outline badge-info font-semibold opacity-90">
+              {{ items.Dates }}
+            </span>
+            <span class="text-base italic text-gray-500">
+              {{ items.location }}
+            </span>
+          </div>
+          <p class="text-lg font-semibold text-gray-100 mb-3">
+            {{ items.position }}
+          </p>
+          <div class="divider"></div>
+
+          <div class="mb-4">
+            <h4 class="font-semibold text-lg mb-2 text-gray-200">Responsabilidades:</h4>
+            <ul class="list-disc ml-6 space-y-1 text-gray-300">
+              @for (responsability of items.responsibilities; track responsability.id) {
+              <li>
+                {{ responsability.description }}
+              </li>
+              }
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-200">Tecnologías:</h4>
+            <ul class="flex flex-wrap gap-2">
+              @for (tecnology of items.technologies; track tecnology.id) {
+                <li class="badge badge-primary badge-outline text-sm">
+                  {{ tecnology.name }} - {{ tecnology.version }}
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </fieldset>
+</section>

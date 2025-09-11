@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { SkillsComponent } from "./components/skills/skills.component";
 import { ListSkillComponent } from "./components/list-skill/list-skill.component";
 import { PresentationComponent } from "./components/presentation/presentation.component";
+import { ProjectService } from '../../services/project.service';
+import { Project } from '../../interfaces/project.interface';
 
 interface Cancion {
   title : string;
@@ -15,9 +17,7 @@ interface Cancion {
   templateUrl: './home.component.html',
 })
 export default class HomeComponent {
-  songs: Cancion[] = [
-    { title: 'Dio Lupa', artist: 'Remaining Reason', imageUrl: 'https://img.daisyui.com/images/profile/demo/1@94.webp' },
-    { title: 'Ellie Beilish', artist: 'Bears of a fever', imageUrl: 'https://img.daisyui.com/images/profile/demo/4@94.webp' },
-    { title: 'Sabrino Gardener', artist: 'Cappuccino', imageUrl: 'https://img.daisyui.com/images/profile/demo/3@94.webp' }
-  ];
+
+  projectsService = inject(ProjectService);
+  getProjects = signal<Project[]>(this.projectsService.projectsList);
 }

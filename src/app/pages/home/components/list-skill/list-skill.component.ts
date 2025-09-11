@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { Project } from '../../../../interfaces/project.interface';
 
 interface Cancion {
   title : string;
@@ -14,6 +15,6 @@ interface Cancion {
 
 export class ListSkillComponent {
 
-  song = input.required<Cancion[]>();
+  projectList = input.required<Project[]>();
 
 }
