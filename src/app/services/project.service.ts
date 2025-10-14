@@ -16,24 +16,24 @@ export class ProjectService {
     },
     {
       id: 2,
-      title: "New York Times",
-      description: "News website realized with Angular",
-      imagePath: "assets/img/nyt.PNG",
-      url: "https://www.nytimes.com"
+      title: "Portafolio",
+      description: "Pagina web portafolio personal realizada con ASP.NET MVC C#.",
+      imagePath: "assets/img/Portafolio-ASP-NET-MVC.png",
+      url: "https://github.com/castellon18/portafolio-asp-net-mvc.git"
     },
     {
       id: 3,
-      title: "Reddit",
-      description: "Social media platform realized with React",
-      imagePath: "assets/img/reddit.PNG",
-      url: "https://www.reddit.com"
+      title: "Country App",
+      description: "Aplicacion web que muestra informacion de paises, realizada con Angular y consumiendo una API REST.",
+      imagePath: "assets/img/Country-App.png",
+      url: "https://github.com/castellon18/country-app-angular.git"
     },
     {
       id: 4,
-      title: "Steam",
-      description: "Store online to shop for games realized with Angular and ASP.NET Core",
-      imagePath: "assets/img/steam.PNG",
-      url: "https://www.store.steampowered.com"
+      title: "App Store",
+      description: "Aplicacion web tipo tienda de aplicaciones, realizada con ASP.NET MVC C# y base de datos SQL Lite.",
+      imagePath: "assets/img/App-Store.png",
+      url: "https://github.com/castellon18/appstore-asp-net-mvc.git"
     }
   ];
 

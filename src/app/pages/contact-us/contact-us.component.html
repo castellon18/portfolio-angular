@@ -1,3 +1,21 @@
+@if (successMessage){
+  <div role="alert" class="alert alert-success">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span>{{successMessage}}</span>
+  </div>
+}
+
+@if (errorMessage){
+  <div role="alert" class="alert alert-error">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span>{{errorMessage}}</span>
+  </div>
+}
+
 <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="onSubmitForm()">
   <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 mx-auto max-w-sm md:max-w-xl lg:max-w-4xl">
     <legend class="fieldset-legend text-xl">Contactame</legend>
@@ -17,10 +35,17 @@
       </span>
     }
     <label class="label mt-3">Email</label>
-    <input type="text" class="input w-full" placeholder="example@gmail.com" formControlName="email"/>
+    <input type="email" class="input w-full" placeholder="example@gmail.com" formControlName="email"/>
     @if (formUtils.isValidField( myForm, 'email' )) {
       <span class="text-error">
         {{ formUtils.getFieldError( myForm, 'email' ) }}
+      </span>
+    }
+    <label class="label mt-3">Telefono</label>
+    <input inputmode="numeric" class="input w-full" placeholder="22806789" formControlName="phonenumber" maxlength="8" pattern="\d*" (input)="onPhoneInput($event)" />
+    @if (formUtils.isValidField( myForm, 'phonenumber' )) {
+      <span class="text-error">
+        {{ formUtils.getFieldError( myForm, 'phonenumber' ) }}
       </span>
     }
     <label class="label mt-3">Mensaje</label>

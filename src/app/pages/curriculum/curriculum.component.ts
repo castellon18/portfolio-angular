@@ -1,17 +1,17 @@
 import { Component, inject, signal } from '@angular/core';
-import { AcademicTrainingService } from '../../services/academic-training.service';
-import { TechnicalSkillService } from '../../services/technical-skill.service';
-import { AcademicTraining } from '../../interfaces/academic-training.interface';
-import { TechnicalSkill } from '../../interfaces/skill.interface';
-import { WorkExperienceService } from '../../services/work-experience.service';
+import { AcademicTrainingService } from '@services/academic-training.service';
+import { TechnicalSkillService } from '@services/technical-skill.service';
+import { WorkExperienceService } from '@services/work-experience.service';
+import { LanguageService } from '@services/language.service';
+import { AcademicTraining } from '@interfaces/academic-training.interface';
+import { TechnicalSkill } from '@interfaces/skill.interface';
+import { WorkExperience } from '@interfaces/work-experience';
+import { Language } from '@interfaces/language.interface';
 import { HeaderComponent } from "./components/header/header.component";
 import { ProfessionalProfileComponent } from "./components/professional-profile/professional-profile.component";
 import { AcademicTrainingComponent } from './components/academic-training/academic-training.component';
 import { SkillsComponent } from "./components/skills/skills.component";
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
-import { WorkExperience } from '../../interfaces/work-experience';
-import { LanguageService } from '../../services/language.service';
-import { Language } from '../../interfaces/language.interface';
 import { LanguageComponent } from './components/language/language.component';
 
 @Component({

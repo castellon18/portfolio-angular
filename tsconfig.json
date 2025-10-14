@@ -3,6 +3,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@services/*" : ["app/services/*"],
+      "@components/*" : ["app/components/*"],
+      "@interfaces/*" : ["app/interfaces/*"],
+      "@utils/*" : ["app/utils/*"],
+      "@env/*" : ["environments/*"]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

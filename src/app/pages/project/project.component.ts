@@ -1,7 +1,7 @@
 import { Component, inject, input, signal } from '@angular/core';
-import { ProjectService } from '../../services/project.service';
-import { Project } from '../../interfaces/project.interface';
-import { ProjectListComponent } from "../../components/project-list/project-list.component";
+import { ProjectService } from '@services/project.service';
+import { Project } from '@interfaces/project.interface';
+import { ProjectListComponent } from "@components/project-list/project-list.component";
 
 @Component({
   selector: 'app-project',

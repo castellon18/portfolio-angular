@@ -4,6 +4,7 @@ export class FormUtils {
 
   //Expresiones regulares para validar campos de formulario
   static emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
+  static telephonePattern = '^[0-9]{8}$';
 
   static isValidField(form: FormGroup, field: string) : boolean | null {
     return form.controls[field].errors && form.controls[field].touched;
@@ -18,6 +19,9 @@ export class FormUtils {
         case 'pattern':
         if (errors['pattern'].requiredPattern === FormUtils.emailPattern) {
           return 'Formato de correo invalido.';
+        }
+        if (errors['pattern'].requiredPattern === FormUtils.telephonePattern) {
+          return 'El telefono debe tener 8 digitos numericos.';
         }
       }
     }
