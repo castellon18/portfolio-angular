@@ -56,6 +56,34 @@ export class AcademicTrainingService {
       year: '2025',
       instructor: 'Felipe Gavilán',
     },
+    {
+      id: 9,
+      title: 'Angular. De cero a experto.',
+      institution: '{dev/talles}.',
+      year: '2025',
+      instructor: 'Fernando Herrera',
+    },
+    {
+      id: 10,
+      title: 'Node.js: De cero a experto.',
+      institution: '{dev/talles}.',
+      year: '2025',
+      instructor: 'Fernando Herrera',
+    },
+    {
+      id: 10,
+      title: 'C#: Empieza tu camino en el lenguaje.',
+      institution: '{dev/talles}.',
+      year: '2025',
+      instructor: 'Teddy Paz',
+    },
+    {
+      id: 11,
+      title: '.NET Backend: .NET Core SQL Server y seguridad JWT.',
+      institution: '{dev/talles}.',
+      year: '2025',
+      instructor: 'Teddy Paz',
+    },
   ];
 
   get AcademicTraining(): AcademicTraining[] {

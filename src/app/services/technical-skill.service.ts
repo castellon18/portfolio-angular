@@ -60,7 +60,7 @@ export class TechnicalSkillService {
       id: 3,
       name:'Inventario',
       skill:[
-        {name: 'Conocimiento de logísca y almacén.',},
+        {name: 'Conocimiento de logística y almacén.',},
         {name: 'Organización.',},
         {name: 'Trabajo en equipo.',},
         {name: 'Comunicación Efectiva.',},

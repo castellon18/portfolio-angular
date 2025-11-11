@@ -14,7 +14,7 @@ export class LanguageService {
     {
       id: 2,
       name: 'Inglés',
-      level: 'Intermedio',
+      level: 'Basico',
       comes_from: 'Estados Unidos',
     }
   ];
