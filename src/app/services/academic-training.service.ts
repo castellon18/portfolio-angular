@@ -59,7 +59,7 @@ export class AcademicTrainingService {
     {
       id: 9,
       title: 'Angular. De cero a experto.',
-      institution: '{dev/talles}.',
+      institution: 'Udemy.',
       year: '2025',
       instructor: 'Fernando Herrera',
     },
